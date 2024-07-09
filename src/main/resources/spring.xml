@@ -1,0 +1,30 @@
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+    <bean
+        id="alien1"
+        class="org.naman.Alien"
+        scope="prototype"
+    >
+        <!--constructor-arg sequence for the sequence of constructor in the class-->
+<!--        <constructor-arg type="int" value="21" />-->
+<!--        <constructor-arg type="org.naman.Laptop" ref="laptop" />-->
+
+        <constructor-arg name="lap" ref="laptop" />
+        <constructor-arg name="age" value="28" />
+
+<!--        <constructor-arg index="0" value="21" />-->
+<!--        <constructor-arg index="1" ref="laptop" />-->
+
+<!--        <property name="lap" ref="laptop" />-->
+    </bean>
+<!--    <bean id="alien2" class="org.naman.Alien" scope="singleton"></bean>-->
+    <bean id="laptop" class="org.naman.Laptop">
+        <property name="name" value="Dell" />
+    </bean>
+<!--    <bean class="org.naman.Laptop"></bean>-->
+</beans>
+
